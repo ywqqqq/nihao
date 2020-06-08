@@ -1,0 +1,53 @@
+@startuml
+auto->luxury:luxury car
+activate luxury
+luxury->aircondition:add aircondition
+activate aircondition
+aircondition-->luxury:return aircondition
+deactivate aircondition
+luxury-->auto:return luxury
+deactivate luxury
+
+auto->luxury:get detail
+activate luxury
+luxury-->auto:return detail
+deactivate luxury
+
+auto->luxury:cost
+activate luxury
+luxury-->auto:return cost
+deactivate luxury
+
+luxury->safebag:safebag
+activate safebag
+safebag-->luxury:return safebag
+deactivate safebag
+
+luxury->navigation:navigation
+activate navigation
+navigation-->luxury:return navigation
+deactivate navigation
+
+auto->luxury:get detail
+activate luxury
+luxury-->auto:return detail
+deactivate luxury
+
+auto->luxury:cost
+activate luxury
+luxury-->auto:return cost
+deactivate luxury
+
+auto->convertible:convertible car
+activate convertible
+convertible->safebag:add safebag
+activate safebag
+safebag-->convertible:return safebag
+deactivate safebag
+convertible->navigation:add navigation
+activate navigation
+navigation-->convertible:return navigation
+deactivate navigation
+convertible-->auto:return conbertible
+deactivate convertible
+@endnuml
